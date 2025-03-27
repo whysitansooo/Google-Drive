@@ -82,9 +82,9 @@ router.post ( '/login' ,
         },
         process.env.JWT_SECRET,
     )
-    res.json ({
-        token
-    })
+    res.cookie ('token',token)
+    res.send ('Logged in') 
+    
     }
  )
 
